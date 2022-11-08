@@ -1,14 +1,15 @@
 const riotToken = "RGAPI-a8ac2be4-3bb9-473b-b053-22f3dbab968b"
 const respchampion = await fetch("../../json/champion.json")
 const champions = await respchampion.json()
-console.log(champions)
+
 
 
 export async function pegarUsuario(regiao,usuario){
     const response = await fetch(`https://${regiao}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${usuario}?api_key=${riotToken}`)
     const perfilUsuario = await response.json()
     localStorage.setItem("user:ID", perfilUsuario.id)
-    console.log(perfilUsuario)
+    localStorage.setItem("user:PUUID", perfilUsuario.puuid)
+    
     return perfilUsuario
 }
 
