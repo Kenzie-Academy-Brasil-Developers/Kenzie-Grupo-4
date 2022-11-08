@@ -1,4 +1,4 @@
-const riotToken = "RGAPI-cc42de6f-7158-4605-be70-6d5b8b7a1dee"
+const riotToken = "RGAPI-a8ac2be4-3bb9-473b-b053-22f3dbab968b"
 const respchampion = await fetch("../../json/champion.json")
 const champions = await respchampion.json()
 console.log(champions)
