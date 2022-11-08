@@ -1,5 +1,124 @@
 .container{
     width: 100vw;
     height: 100vh;
+    background: url(../../assets/asher\ background.jpeg);
+}
+
+.header__pagina{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--color-brand-1);
+    width: 100%;
+    height: 10%;
+}
+
+
+.img__menu{
+    width: 20px;
+    cursor: pointer;
+}
+
+.imagem__icone{
+    width: 40px;
+    height: 40px;
+}
+
+.div__btnJogar{
+    display:none;
+    width: 100%;
+    height: 4rem;
+    background: var(--color-brand-1);
+    position: absolute;
+    left: 0;
+    top: 10%;
+    align-items: center;
+}
+
+.abrir{
+    display:flex
+}
+
+.div__btnJogar>a{
+    margin:auto;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid var(--color-grey-2) ;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--color-grey-6);
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    height: 40%;
+    gap: 1rem;
+}
+
+.formulario>input{
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.formulario>input::placeholder{
+    color: var(--color-grey-1);
+}
+
+
+
+.formulario>button{
+    background-color: var(--color-brand-1);
+    border-radius: 50px;
+    border: 1px solid var(--color-brand-1);
+}
+
+.formulario>button>img{
+    width: 22px;
+}
+
+
+
+@media(min-width:768px){
+
+    .container{
+        background: none;
+        background-color: var(--color-brand-1);
+    }
+
+    .header__pagina{
+        border-bottom: 1px solid var(--color-grey-6);
+    }
+
+    .formulario{
+        background: url(../../assets/asher\ background.jpeg);
+        height: 380px;
+        width: 100vw;
+    }
+
+    .formulario>input{
+        width: 500px;
+    }
+
+    .img__menu{
+        display: none;
+    }
+
+    .div__btnJogar{
+        display: flex;
+        width: 60px;
+        height: 40px;
+        position: relative;
+        bottom: 2rem;
+       
+    }
+
+
 }
