@@ -3,31 +3,28 @@ import {pegarUsuario, dadosDoUsuario, campeoesMaisJogados} from "../../script/ap
     
 
 
-async function procurarUsuario(){
-    const form = document.querySelector(".formProcurarUsuario")
+async function searchUser(){
+    const select = document.querySelector("select")
 
-    
-    const regiaoValue = document.querySelector(".regiao")
-    regiaoValue.addEventListener("change", event =>{
+    const regiaoValue = document.querySelector(".login__button")
+    regiaoValue.addEventListener("click", event =>{
         event.preventDefault()
-        const regiaoPesquisada = regiaoValue.value
+        const regiaoPesquisada = select.value
         localStorage.setItem("regiao", regiaoPesquisada)
-        
     })
     
     
-    form.addEventListener("submit",async  event =>{
-        const usuarioPesquisado = document.querySelector(".usuario")
+    regiaoValue.addEventListener("click",async  event =>{
+        const usuarioPesquisado = document.querySelector(".input")
         event.preventDefault()
         const regiao = localStorage.getItem("regiao")
-        
         pegarUsuario(regiao, usuarioPesquisado.value)
         
         
     })
 
 }
-procurarUsuario()
+searchUser()
 
 
 
