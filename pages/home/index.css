@@ -400,6 +400,7 @@ main {
   gap: 5px
 }
 
+
 .modal__champions__img {
   width: 50px;
   height: 50px;
@@ -455,14 +456,27 @@ main {
   main {
     display: flex;
     flex-direction: column;
-
     background: url("../../assets/wallpaper.jpg");
   }
+
 
   .img__menu {
     display: flex;
     flex-direction: row;
-    gap: 7rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .login__logo{
+    width: 100px;
+  }
+
+  .abrir{
+    display: flex;
+  }
+
+  .text__white{
+    text-decoration-color: var(--white);
   }
 
   .login__menu {
