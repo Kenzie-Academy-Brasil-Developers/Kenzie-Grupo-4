@@ -47,7 +47,7 @@ function openSearch() {
 
     btnSearch.addEventListener("click", () => {
         menuSearch.classList.toggle("abrir")
-       
+       console.log("oi")
         btnSearch.classList.toggle("text__white")
 
         if (btnSearch.classList.contains("text__white")) {
@@ -57,7 +57,5 @@ function openSearch() {
         }
     })
 }
-
-
 
 openSearch()
