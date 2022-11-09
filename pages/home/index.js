@@ -5,6 +5,7 @@ import {
     campeoesMaisJogados,
     backgroundImagem
 } from "../../script/api.js"
+import { renderModal } from "../../script/render.js"
 
 
 
@@ -17,7 +18,7 @@ async function searchUser() {
         event.preventDefault()
         const regiaoPesquisada = select.value
         localStorage.setItem("regiao", regiaoPesquisada)
-        loadSummonerInfo()
+        
     })
 
 
@@ -25,21 +26,30 @@ async function searchUser() {
         const usuarioPesquisado = document.querySelector(".input")
         event.preventDefault()
         const regiao = localStorage.getItem("regiao")
-        pegarUsuario(regiao, usuarioPesquisado.value)
-        //console.log(await pegarUsuario(regiao, usuarioPesquisado.value))
-        console.log(await campeoesMaisJogados())
+        const usuario = pegarUsuario(regiao, usuarioPesquisado.value)
+        
+        //loadSummonerInfo(usuario)
 
     })
 
 }
 searchUser()
 
-async function loadSummonerInfo(){
+export async function loadSummonerInfo(account){
     const regiao = localStorage.getItem("regiao")
     const summonerId = localStorage.getItem("user:ID")
+    
+    const summoner = await dadosDoUsuario(regiao, summonerId)
+    
+    const mostPlayed = await campeoesMaisJogados(summonerId)
 
-    //console.log(await dadosDoUsuario(summonerId))
-    console.log(await campeoesMaisJogados(summonerId))
+    const card = await renderModal(summoner, account, champions, mostPlayed)
+    
+    const section = document.querySelector(".wallpaper")
+    section.innerHTML = ''
+    section.appendChild(card)
+
+   
 }
 
 
