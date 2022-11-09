@@ -21,10 +21,19 @@ ul {
   --black: #000000;
   --blue: #1B77F3;
   --red: #CF3C3F;
+  
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
+  overflow: hidden;
 }
 
 main {
   display: flex;
+  height: 100vh;
 }
 
 .login {
@@ -33,7 +42,8 @@ main {
   align-items: center;
   width: 100%;
   max-width: 500px;
-  padding: clamp(35px, 8%, 70px);
+  padding: 20px;
+
 }
 
 .wrapper {
@@ -46,7 +56,6 @@ main {
 
 .login__menu {
   display: none;
-
 }
 
 .login__logo {
@@ -71,7 +80,14 @@ main {
 .login__search {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
+}
+
+.img__menu {
+  text-align: center;
 }
 
 .input {
@@ -185,7 +201,6 @@ main {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  margin: 5rem 100px 60px;
 }
 
 .login__button:hover {
@@ -217,6 +232,7 @@ main {
 
 .wallpaper {
   width: 100%;
+  height: 100%;
   background-image: url('../../assets/wallpaper.jpg');
   background-size: cover;
   background-position: center;
@@ -276,26 +292,25 @@ main {
 .modal {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 40%;
   padding: 20px;
-  height: 70%;
   border-radius: 8px;
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: 5rem;
+  margin-top: 20%;
+  opacity: 85%;
+  min-width: 520px;
 }
 
 .modal__perfil {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
 
 .modal__perfil__img {
-
   gap: 1rem;
   width: 100px;
   height: 100px;
@@ -308,7 +323,7 @@ main {
 .modal__img {
   width: 100%;
   border-radius: 5px;
-  margin-top: 22px;
+  margin-top: -65px;
 
 }
 
@@ -319,20 +334,20 @@ main {
   color: rgb(255, 255, 255);
   background-color: rgb(32, 45, 55);
   font-family: Roboto, sans-serif;
-  margin-top: -11px;
+  margin-top: -25px;
   text-align: center;
   width: 70px;
 }
 
 .modal__nick {
   font-size: 30px;
-  margin-top: -20px;
+  text-align: center;
 }
 
 .modal__card {
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: -40px;
 }
 
 .modal__description {
@@ -353,16 +368,18 @@ main {
 }
 
 .modal__rank__title {
-  font-size: 16px;
+  font-size: 22px;
   margin-bottom: 15px;
 }
 
 .modal__rank__img {
-  width: 90px;
+  width: 125px;
+  margin-top: -56px;
 }
 
 .modal__rank__points {
-  font-size: 10px;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 .modal__champions {
@@ -371,15 +388,23 @@ main {
 }
 
 .modal__champions__title {
-  font-size: 15px;
+  font-size: 22px;
   text-align: center;
-  margin-top: 15px;
-
 }
 
 .modal__champions__ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.champions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .champions {
@@ -397,13 +422,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px
+  gap: 5px;
+  margin-right: 10px;
 }
 
 
 .modal__champions__img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 10px;
 }
 
@@ -423,13 +449,13 @@ main {
 .modal__winrate {
   display: flex;
   flex-direction: column;
-
 }
 
 .modal__winrate__title {
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
   margin-bottom: 5px;
+  margin-top: 20px;
 
 }
 
@@ -440,26 +466,22 @@ main {
   border-radius: 100%;
   align-items: center;
   text-align: center;
-  font-size: 30px;
-  padding-top: 30px;
-
+  font-size: 34px;
+  margin-top: 10px;
+  padding-top: 27px;
 }
-
 
 .div {
   display: flex;
   flex-direction: row;
 }
 
-@media(max-width:912px) {
-
+@media(max-width:1221px) {
   main {
     display: flex;
     flex-direction: column;
     background: url("../../assets/wallpaper.jpg");
   }
-
-
   .img__menu {
     display: flex;
     flex-direction: row;
@@ -467,81 +489,105 @@ main {
     width: 100%;
   }
 
-  .login__logo{
+  .login {
+    max-width: 100%;
+  }
+
+  .login__logo {
     width: 100px;
   }
 
-  .abrir{
+  .login__label span {
+    font-size: 10px;
+  }
+  .login__label {
+    margin-bottom: 6px;
+  }
+  .abrir {
     display: flex;
   }
 
-  .text__white{
+  .text__white {
     text-decoration-color: var(--white);
   }
-
   .login__menu {
     width: 22px;
     height: 18px;
     display: flex;
   }
-
   .login__search {
-    display: none;
     flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    opacity: 85%;
+    border-radius: 10px;
+    margin-top: -54px;
   }
 
+  .login__title {
+    margin-bottom: 10px;
+  }
   .wallpaper {
     background: none;
     margin: 0;
-    margin-top: -130px;
-    margin-bottom: 2rem;
+    height: 100vh;
   }
 
   .select-dropdown:after {
-
     position: absolute;
     top: 50%;
-    right: 65%;
-
+    right: 15%;
   }
 
-  .login__button {
-    margin: 0 0 150px 115px;
-    position: relative;
-    bottom: 59px;
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    margin: auto;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    opacity: 85%;
+    min-width: 310px;
+    margin-top: -8px;
+    margin-bottom: 500px;
   }
 
-  .modal__rank__img {
-    width: 50px;
-  }
 
   .modal__rank__title {
     font-size: 10px;
     margin-bottom: 15px;
     width: 100px;
-
   }
-
-  .modal__rank {
-    width: 50px;
-  }
-
   .modal__winrate__p {
     width: 70px;
     height: 70px;
     font-size: 20px;
     padding-top: 20px;
   }
-
   .modal__winrate__title {
     font-size: 12px;
-
   }
-
   .modal__champions__title {
     font-size: 14px;
-  
   }
 
+  .modal__rank__img {
+    visibility: hidden;
+    margin-left: -200px;
+  }
+  .modal__winrate {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .modal__winrate__title {
+    font-size: 18px;
+    margin-right: 10px;
+    padding-top: 10px;
+  }
 
 }
