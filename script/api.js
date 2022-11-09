@@ -1,6 +1,8 @@
-const riotToken = "RGAPI-a8ac2be4-3bb9-473b-b053-22f3dbab968b"
+import {gerarBackground} from "../pages/home/index.js"
+
+const riotToken = "RGAPI-91dddd49-6bea-4346-8348-3575d6d125b5"
 const respchampion = await fetch("../../json/champion.json")
-const champions = await respchampion.json()
+export const champions = await respchampion.json()
 
 
 
@@ -9,6 +11,10 @@ export async function pegarUsuario(regiao,usuario){
     const perfilUsuario = await response.json()
     localStorage.setItem("user:ID", perfilUsuario.id)
     localStorage.setItem("user:PUUID", perfilUsuario.puuid)
+    localStorage.setItem("user:Icon", perfilUsuario.profileIconId)
+    
+    gerarBackground()
+    
     
     return perfilUsuario
 }
@@ -17,17 +23,42 @@ export async function pegarUsuario(regiao,usuario){
 export async function dadosDoUsuario(){
     
     const idUser = localStorage.getItem("user:ID")
+    const regiao = localStorage.getItem("regiao")
   
-    const response = await fetch(`https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/${idUser}?api_key=${riotToken}`)
+    const response = await fetch(`https://${regiao}.api.riotgames.com/lol/league/v4/entries/by-summoner/${idUser}?api_key=${riotToken}`)
     const informacoesDoUsuario = await response.json()
-    console.log(informacoesDoUsuario)
+    
+    
     return informacoesDoUsuario
 }
 
 export async function campeoesMaisJogados(){
     const idUser = localStorage.getItem("user:ID")
-    const response = await fetch(`https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${idUser}/top?api_key=${riotToken}`)
+    const regiao = localStorage.getItem("regiao")
+    const response = await fetch(`https://${regiao}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${idUser}/top?api_key=${riotToken}`)
     const campeoes = await response.json()
-    console.log(campeoes)
+    
     return campeoes
 }
+
+export async function iconeDoUsuario(){
+    const icon = localStorage.getItem("user:Icon")
+
+    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${icon}.png`)
+    const Iconusuario = await response
+   
+    
+    return Iconusuario.url
+}
+
+export async function backgroundImagem(nome){
+    
+    const tratado = nome.replace(/ /g,'');
+    
+    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${tratado}_0.jpg`)
+    const imagem =  response
+    
+    return imagem.url
+}
+
+
