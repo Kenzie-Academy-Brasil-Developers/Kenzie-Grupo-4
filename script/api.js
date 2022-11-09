@@ -12,6 +12,7 @@ export async function pegarUsuario(regiao,usuario){
     localStorage.setItem("user:Icon", perfilUsuario.profileIconId)
     
     
+    
     return perfilUsuario
 }
 
@@ -19,8 +20,9 @@ export async function pegarUsuario(regiao,usuario){
 export async function dadosDoUsuario(){
     
     const idUser = localStorage.getItem("user:ID")
+    const regiao = localStorage.getItem("regiao")
   
-    const response = await fetch(`https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/${idUser}?api_key=${riotToken}`)
+    const response = await fetch(`https://${regiao}.api.riotgames.com/lol/league/v4/entries/by-summoner/${idUser}?api_key=${riotToken}`)
     const informacoesDoUsuario = await response.json()
     
     return informacoesDoUsuario
@@ -28,7 +30,8 @@ export async function dadosDoUsuario(){
 
 export async function campeoesMaisJogados(){
     const idUser = localStorage.getItem("user:ID")
-    const response = await fetch(`https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${idUser}/top?api_key=${riotToken}`)
+    const regiao = localStorage.getItem("regiao")
+    const response = await fetch(`https://${regiao}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${idUser}/top?api_key=${riotToken}`)
     const campeoes = await response.json()
     
     return campeoes
