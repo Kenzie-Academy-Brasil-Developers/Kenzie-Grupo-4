@@ -21,6 +21,13 @@ ul {
   --black: #000000;
   --blue: #1B77F3;
   --red: #CF3C3F;
+  
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
 }
 
 main {
@@ -34,7 +41,8 @@ main {
   align-items: center;
   width: 100%;
   max-width: 500px;
-  padding: clamp(35px, 8%, 70px);
+  padding: 20px;
+
 }
 
 .wrapper {
@@ -47,7 +55,6 @@ main {
 
 .login__menu {
   display: none;
-
 }
 
 .login__logo {
@@ -193,7 +200,6 @@ main {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  margin: 27rem 100px 60px;
 }
 
 .login__button:hover {
@@ -225,7 +231,7 @@ main {
 
 .wallpaper {
   width: 100%;
-  height: 110vh;
+  height: 100%;
   background-image: url('../../assets/wallpaper.jpg');
   background-size: cover;
   background-position: center;
@@ -287,12 +293,11 @@ main {
   flex-direction: column;
   width: 40%;
   padding: 20px;
-  height: 70%;
   border-radius: 8px;
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: 5rem;
+  margin-top: 14rem;
   opacity: 85%;
   min-width: 520px;
 }
@@ -335,8 +340,7 @@ main {
 
 .modal__nick {
   font-size: 30px;
-  margin-top: -20px;
-  margin-left: 20px;
+  text-align: center;
 }
 
 .modal__card {
@@ -391,6 +395,14 @@ main {
   flex-direction: row;
   justify-content: center;
   margin-top: 15px;
+}
+
+.champions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .champions {
@@ -461,7 +473,8 @@ main {
   display: flex;
   flex-direction: row;
 }
-@media(max-width:912px) {
+
+@media(max-width:1221px) {
   main {
     display: flex;
     flex-direction: column;
@@ -473,13 +486,24 @@ main {
     justify-content: space-between;
     width: 100%;
   }
-  .login__logo{
+
+  .login {
+    max-width: 100%;
+  }
+
+  .login__logo {
     width: 100px;
   }
-  .abrir{
+
+  .login__label span {
+    font-size: 10px;
+  }
+
+  .abrir {
     display: flex;
   }
-  .text__white{
+
+  .text__white {
     text-decoration-color: var(--white);
   }
   .login__menu {
@@ -488,8 +512,12 @@ main {
     display: flex;
   }
   .login__search {
-    display: none;
     flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    opacity: 85%;
+    border-radius: 10px;
   }
   .wallpaper {
     background: none;
@@ -499,23 +527,29 @@ main {
   .select-dropdown:after {
     position: absolute;
     top: 50%;
-    right: 65%;
+    right: 15%;
   }
-  .login__button {
-    margin: 0 0 150px 115px;
-    position: relative;
-    bottom: 59px;
+
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    margin: auto;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    opacity: 85%;
+    min-width: 310px;
+    margin-top: 30px;
   }
-  .modal__rank__img {
-    width: 50px;
-  }
+
+
   .modal__rank__title {
     font-size: 10px;
     margin-bottom: 15px;
     width: 100px;
-  }
-  .modal__rank {
-    width: 50px;
   }
   .modal__winrate__p {
     width: 70px;
@@ -528,5 +562,10 @@ main {
   }
   .modal__champions__title {
     font-size: 14px;
+  }
+
+  .modal__rank__img {
+    visibility: hidden;
+    margin-left: -200px;
   }
 }
