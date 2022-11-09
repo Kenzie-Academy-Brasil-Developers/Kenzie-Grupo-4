@@ -15,6 +15,7 @@ async function searchUser() {
         event.preventDefault()
         const regiaoPesquisada = select.value
         localStorage.setItem("regiao", regiaoPesquisada)
+        loadSummonerInfo()
     })
 
 
@@ -23,12 +24,21 @@ async function searchUser() {
         event.preventDefault()
         const regiao = localStorage.getItem("regiao")
         pegarUsuario(regiao, usuarioPesquisado.value)
-
+        //console.log(await pegarUsuario(regiao, usuarioPesquisado.value))
+        console.log(await campeoesMaisJogados())
 
     })
 
 }
 searchUser()
+
+async function loadSummonerInfo(){
+    const regiao = localStorage.getItem("regiao")
+    const summonerId = localStorage.getItem("user:ID")
+
+    //console.log(await dadosDoUsuario(summonerId))
+    console.log(await campeoesMaisJogados(summonerId))
+}
 
 
 function openSearch() {
@@ -47,5 +57,7 @@ function openSearch() {
         }
     })
 }
+
+
 
 openSearch()
