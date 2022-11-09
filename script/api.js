@@ -52,8 +52,8 @@ export async function iconeDoUsuario(){
 }
 
 export async function backgroundImagem(nome){
-
-    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nome}_0.jpg`)
+    const nomeTratato = nome.trim()
+    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nomeTratato}_0.jpg`)
     const imagem =  response
     
     return imagem.url
