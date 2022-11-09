@@ -60,3 +60,5 @@ export async function backgroundImagem(nome){
     
     return imagem.url
 }
+
+
