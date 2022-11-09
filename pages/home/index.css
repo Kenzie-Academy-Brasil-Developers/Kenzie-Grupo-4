@@ -21,6 +21,7 @@ ul {
   --black: #000000;
   --blue: #1B77F3;
   --red: #CF3C3F;
+  
 }
 
 body {
@@ -494,6 +495,7 @@ main {
   .login__logo {
     width: 100px;
   }
+
   .login__label span {
     font-size: 10px;
   }
@@ -569,8 +571,9 @@ main {
   .modal__champions__title {
     font-size: 14px;
   }
+
   .modal__rank__img {
     visibility: hidden;
-    margin-left: -200px ;
-}
+    margin-left: -200px;
+  }
 }
