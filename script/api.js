@@ -14,7 +14,7 @@ export async function pegarUsuario(regiao,usuario){
     localStorage.setItem("user:Icon", perfilUsuario.profileIconId)
     
     gerarBackground()
-    loadSummonerInfo(perfilUsuario)
+    await loadSummonerInfo(perfilUsuario)
    
     return perfilUsuario
 }

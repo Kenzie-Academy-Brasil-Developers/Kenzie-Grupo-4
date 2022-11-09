@@ -1,12 +1,17 @@
+import { loadSummonerInfo } from "../pages/home/index.js"
 import { iconeDoUsuario } from "./api.js"
 
 export async function renderModal(summoner, account, champions, mostPlayedChampions){
     const userIcon = await iconeDoUsuario()
     const accountInfo = await account
-    const wins = summoner[1].wins
-    const losses =summoner[1].losses
+    const queueSolo = summoner.findIndex(element => element.queueType === 'RANKED_SOLO_5x5')
+
+    const wins =  summoner[queueSolo].wins
+    const losses =  summoner[queueSolo].losses
     const winRate = (wins / ((wins + losses))*100).toFixed(2)
     let championsMastery = mostPlayedChampions.map(champion => champion.championPoints)
+    
+    
     const modal = document.createElement("div")
     
         const modalPerfil = document.createElement("div")
@@ -80,9 +85,9 @@ modalWinrate.classList.add("modal__winrate")
 modalWinrate.append(modalWinrateTitle, modalWinrateP)
 
 //CORRIGIR DETALHES: imagem de elo, tratamento do texto para pt-br
-modalRankPoints.innerText =`${summoner[1].tier} ${summoner[1].rank} - ${summoner[1].leaguePoints} PDL`
+modalRankPoints.innerText = `${summoner[queueSolo].tier} ${summoner[queueSolo].rank} - ${summoner[queueSolo].leaguePoints} PDL`
 modalRankPoints.classList.add("modal__rank__points")
-modalRankImg.src = `../../assets/ranked-emblems/${summoner[1].tier}.png`
+modalRankImg.src = `../../assets/ranked-emblems/${summoner[queueSolo].tier}.png`
 modalRankImg.classList.add("modal__rank__img")
 modalRankTitle.innerText = "Ranqueada Solo"
 modalRankTitle.classList.add("modal__rank__title")
@@ -98,7 +103,7 @@ modalDescription.classList.add("modal__description")
 modalCard.append(modalDescription, modalChampions)
 modalCard.classList.add("modal__card")
 
-modalNick.innerText = summoner[1].summonerName
+modalNick.innerText = summoner[queueSolo].summonerName
 modalNick.classList.add("modal__nick")
 modalLevel.innerText = accountInfo.summonerLevel
 modalLevel.classList.add("modal__level")
