@@ -25,22 +25,22 @@
                             <span>nome de usuário</span>
                             <input type="text" name="username" class="input">
                         </label>
-                    </div>
-                    <div class="select-dropdown">
-                        <select>
-                            <option value="Option 0">Região</option>
-                            <option value="br1">BR</option>
-                            <option value="eun1">EUN</option>
-                            <option value="euw1">EUW</option>
-                            <option value="jp1">JP</option>
-                            <option value="kr">KR</option>
-                            <option value="la1">LA</option>
-                            <option value="la2">LA</option>
-                            <option value="na1">NA</option>
-                            <option value="oc1">OC</option>
-                            <option value="ru">RU</option>
-                            <option value="tr1">TR</option>
-                        </select>
+                        <div class="select-dropdown">
+                            <select>
+                                <option value="Option 0">Região</option>
+                                <option value="br1">BR</option>
+                                <option value="eun1">EUN</option>
+                                <option value="euw1">EUW</option>
+                                <option value="jp1">JP</option>
+                                <option value="kr">KR</option>
+                                <option value="la1">LA</option>
+                                <option value="la2">LA</option>
+                                <option value="na1">NA</option>
+                                <option value="oc1">OC</option>
+                                <option value="ru">RU</option>
+                                <option value="tr1">TR</option>
+                            </select>
+                        </div>
                     </div>
                     <button type="button" class="login__button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -58,42 +58,46 @@
                     <div class="modal__perfil__img">
                         <img class="modal__img" src="../../assets/PERFIL.jpg" alt="perfil">
                         <p class="modal__level">515</p>
+                    </div>
+                    <div class="modal__text">
                         <p class="modal__nick">Gregorone</p>
+                        <div class="modal__rank">
+                            <p class="modal__rank__points">Chalenger - 205 LP</p>
+                        </div>
+                    </div>
+                    <div class="modal__rank__logo">
+                        <img class="modal__rank__img" src="../../assets/908f95127caf7f739877f9f555807361.png"
+                            alt="rank">
                     </div>
                 </div>
                 <div class="modal__card">
                     <div class="modal__description">
                         <div class="champions">
-                            <div class="modal__rank">
-                                <p class="modal__rank__title">Ranqueada Solo</p>
-                                <img class="modal__rank__img" src="../../assets/908f95127caf7f739877f9f555807361.png"
-                                    alt="rank">
-                                <p class="modal__rank__points">Chalenger - 205 LP</p>
-                            </div>
-                            <div class="modal__winrate">
-                                <p class="modal__winrate__title">Winrate</p>
-                                <p class="modal__winrate__p">50%</p>
+                            <div class="modal__champions">
+                                <p class="modal__champions__title">Campeões com mais maestria</p>
+                                <ul class="modal__champions__ul">
+                                    <li class="modal__champions__li">
+                                        <img class="modal__champions__img" src="../../assets/LeeSin_0.jpg"
+                                            alt="lee sin">
+                                        <p class="modal__champions__maestry">257.056</p>
+                                        <p>Lee Sin</p>
+                                    </li>
+                                    <li class="modal__champions__li">
+                                        <img class="modal__champions__img" src="../../assets/zed.png" alt="zed">
+                                        <p class="modal__champions__maestry">178.572</p>
+                                        <p>Zed</p>
+                                    </li>
+                                    <li class="modal__champions__li">
+                                        <img class="modal__champions__img" src="../../assets/swain.jpg" alt="swain">
+                                        <p class="modal__champions__maestry">128.864</p>
+                                        <p>Swain</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="modal__champions">
-                            <p class="modal__champions__title">Campeões com mais maestria</p>
-                            <ul class="modal__champions__ul">
-                                <li class="modal__champions__li">
-                                    <img class="modal__champions__img" src="../../assets/LeeSin_0.jpg" alt="lee sin">
-                                    <p class="modal__champions__maestry">257.056</p>
-                                    <p>Lee Sin</p>
-                                </li>
-                                <li class="modal__champions__li">
-                                    <img class="modal__champions__img" src="../../assets/zed.png" alt="zed">
-                                    <p class="modal__champions__maestry">178.572</p>
-                                    <p>Zed</p>
-                                </li>
-                                <li class="modal__champions__li">
-                                    <img class="modal__champions__img" src="../../assets/swain.jpg" alt="swain">
-                                    <p class="modal__champions__maestry">128.864</p>
-                                    <p>Swain</p>
-                                </li>
-                            </ul>
+                        <div class="modal__winrate">
+                            <p class="modal__winrate__title">Winrate</p>
+                            <p class="modal__winrate__p">50%</p>
                         </div>
                     </div>
                 </div>
@@ -103,3 +107,4 @@
 </body>
 
 </html>
+
