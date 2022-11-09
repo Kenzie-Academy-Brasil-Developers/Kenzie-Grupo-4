@@ -31,21 +31,21 @@ async function searchUser() {
 searchUser()
 
 
-function openSearch() {
-    const btnSearch = document.getElementById("buttonSearch")
-    const menuSearch = document.querySelector(".login__search")
+// function openSearch() {
+//     const btnSearch = document.getElementById("buttonSearch")
+//     const menuSearch = document.querySelector(".login__search")
 
-    btnSearch.addEventListener("click", () => {
-        menuSearch.classList.toggle("abrir")
+//     btnSearch.addEventListener("click", (event) => {
+//         event.preventDefault()
+//         menuSearch.classList.toggle("abrir")
        
-        btnSearch.classList.toggle("text__white")
+//         btnSearch.classList.toggle("text__white")
 
-        if (btnSearch.classList.contains("text__white")) {
-            btnSearch.src = "../../assets/Vector (8).png"
-        } else {
-            btnSearch.src = "../../assets/Vector (9).png"
-        }
-    })
-}
-
-openSearch()
+//         if (btnSearch.classList.contains("text__white")) {
+//             btnSearch.src = "../../assets/Vector (9).png"
+//         } else {
+//             btnSearch.src = "../../assets/Vector (8).png"
+//         }
+//     })
+// }
+// openSearch()
