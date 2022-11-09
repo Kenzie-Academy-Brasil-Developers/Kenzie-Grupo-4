@@ -28,6 +28,7 @@ body {
   width: 100vw;
   height: 100vh;
   min-width: 320px;
+  overflow: hidden;
 }
 
 main {
@@ -297,7 +298,7 @@ main {
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: 14rem;
+  margin-top: 20%;
   opacity: 85%;
   min-width: 520px;
 }
@@ -346,6 +347,7 @@ main {
 .modal__card {
   display: flex;
   flex-direction: row;
+  margin-top: -40px;
 }
 
 .modal__description {
@@ -498,7 +500,9 @@ main {
   .login__label span {
     font-size: 10px;
   }
-
+  .login__label {
+    margin-bottom: 6px;
+  }
   .abrir {
     display: flex;
   }
@@ -518,18 +522,23 @@ main {
     background-color: white;
     opacity: 85%;
     border-radius: 10px;
+    margin-top: -54px;
+  }
+
+  .login__title {
+    margin-bottom: 10px;
   }
   .wallpaper {
     background: none;
     margin: 0;
-    margin-bottom: 2rem;
+    height: 100vh;
   }
+
   .select-dropdown:after {
     position: absolute;
     top: 50%;
     right: 15%;
   }
-
 
   .modal {
     display: flex;
@@ -542,7 +551,8 @@ main {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     opacity: 85%;
     min-width: 310px;
-    margin-top: 30px;
+    margin-top: -8px;
+    margin-bottom: 500px;
   }
 
 
@@ -568,4 +578,16 @@ main {
     visibility: hidden;
     margin-left: -200px;
   }
+  .modal__winrate {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .modal__winrate__title {
+    font-size: 18px;
+    margin-right: 10px;
+    padding-top: 10px;
+  }
+
 }
