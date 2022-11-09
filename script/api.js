@@ -1,4 +1,4 @@
-import {gerarBackground} from "../pages/home/index.js"
+import {gerarBackground, loadSummonerInfo} from "../pages/home/index.js"
 
 const riotToken = "RGAPI-91dddd49-6bea-4346-8348-3575d6d125b5"
 const respchampion = await fetch("../../json/champion.json")
@@ -14,8 +14,8 @@ export async function pegarUsuario(regiao,usuario){
     localStorage.setItem("user:Icon", perfilUsuario.profileIconId)
     
     gerarBackground()
-    
-    
+    loadSummonerInfo(perfilUsuario)
+   
     return perfilUsuario
 }
 
@@ -52,9 +52,9 @@ export async function iconeDoUsuario(){
 }
 
 export async function backgroundImagem(nome){
-    
+
     const tratado = nome.replace(/ /g,'');
-    
+
     const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${tratado}_0.jpg`)
     const imagem =  response
     
