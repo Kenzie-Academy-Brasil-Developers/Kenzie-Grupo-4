@@ -61,7 +61,8 @@ const modalCard = (element) => {
   modalLi.classList.add("modal__chapions__li")
   modalChampionsImg.classList.add("modal__champions__img")
   modalMaestry.classList.add("modal__champions__maestry")
-  
+  modalWinrate.classList.add("modal__winrate")
+  modalWinrateTitle.classList.add("modal__winrate__title")
 
 
 
