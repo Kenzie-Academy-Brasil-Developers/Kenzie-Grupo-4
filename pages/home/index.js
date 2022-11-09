@@ -1,7 +1,9 @@
 import {
+    champions,
     pegarUsuario,
     dadosDoUsuario,
-    campeoesMaisJogados
+    campeoesMaisJogados,
+    backgroundImagem
 } from "../../script/api.js"
 
 
@@ -41,21 +43,32 @@ async function loadSummonerInfo(){
 }
 
 
-function openSearch() {
-    const btnSearch = document.getElementById("buttonSearch")
-    const menuSearch = document.querySelector(".login__search")
+openSearch()
 
-    btnSearch.addEventListener("click", () => {
-        menuSearch.classList.toggle("abrir")
-       console.log("oi")
-        btnSearch.classList.toggle("text__white")
-
-        if (btnSearch.classList.contains("text__white")) {
-            btnSearch.src = "../../assets/Vector (8).png"
-        } else {
-            btnSearch.src = "../../assets/Vector (9).png"
+export async function gerarBackground(){
+    const campeoes = await campeoesMaisJogados()
+    const MaisJogado =  campeoes[0]
+   
+    champions.forEach(async element =>{
+        if(element.key == MaisJogado.championId){
+            const background = element.name
+            const baseUrl = await backgroundImagem(background)
+           
+            await renderizarBackground(baseUrl)
+            
         }
-    })
+        
+        
+    });
 }
 
-openSearch()
+async function renderizarBackground(base){
+    const baseBackground = document.querySelector(".wallpaper")
+    const url = await base
+    
+    
+    baseBackground.style.backgroundImage = `url("${url}")`
+    
+
+}
+
