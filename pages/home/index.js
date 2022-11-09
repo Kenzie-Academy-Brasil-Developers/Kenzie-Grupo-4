@@ -1,7 +1,9 @@
 import {
+    champions,
     pegarUsuario,
     dadosDoUsuario,
-    campeoesMaisJogados
+    campeoesMaisJogados,
+    backgroundImagem
 } from "../../script/api.js"
 
 
@@ -61,3 +63,30 @@ function openSearch() {
 
 
 openSearch()
+
+export async function gerarBackground(){
+    const campeoes = await campeoesMaisJogados()
+    const MaisJogado =  campeoes[0]
+   
+    champions.forEach(async element =>{
+        if(element.key == MaisJogado.championId){
+            const background = element.name
+            const baseUrl = await backgroundImagem(background)
+           
+            await renderizarBackground(baseUrl)
+            
+        }
+        
+        
+    });
+}
+
+async function renderizarBackground(base){
+    const baseBackground = document.querySelector(".wallpaper")
+    const url = await base
+    
+    
+    baseBackground.style.backgroundImage = `url("${url}")`
+    
+
+}
