@@ -40,12 +40,8 @@ main {
   align-items: center;
   width: 100%;
   max-width: 500px;
-<<<<<<< HEAD
   padding: 20px;
 
-=======
-  padding: clamp(35px, 8%, 70px);
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .wrapper {
@@ -58,10 +54,6 @@ main {
 
 .login__menu {
   display: none;
-<<<<<<< HEAD
-=======
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .login__logo {
@@ -86,7 +78,6 @@ main {
 .login__search {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -95,9 +86,6 @@ main {
 
 .img__menu {
   text-align: center;
-=======
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .input {
@@ -211,10 +199,6 @@ main {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-<<<<<<< HEAD
-=======
-  margin: 5rem 100px 60px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .login__button:hover {
@@ -306,45 +290,25 @@ main {
 .modal {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   width: 40%;
   padding: 20px;
-=======
-  width: 70%;
-  padding: 20px;
-  height: 70%;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   border-radius: 8px;
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-<<<<<<< HEAD
   margin-top: 14rem;
   opacity: 85%;
   min-width: 520px;
-=======
-  margin-top: 5rem;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .modal__perfil {
   display: flex;
-<<<<<<< HEAD
   flex-direction: row;
   justify-content: space-between;
-=======
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 
 }
 
 .modal__perfil__img {
-<<<<<<< HEAD
-=======
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   gap: 1rem;
   width: 100px;
   height: 100px;
@@ -357,11 +321,7 @@ main {
 .modal__img {
   width: 100%;
   border-radius: 5px;
-<<<<<<< HEAD
   margin-top: -65px;
-=======
-  margin-top: 22px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 
 }
 
@@ -405,16 +365,11 @@ main {
 }
 
 .modal__rank__title {
-<<<<<<< HEAD
   font-size: 22px;
-=======
-  font-size: 16px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   margin-bottom: 15px;
 }
 
 .modal__rank__img {
-<<<<<<< HEAD
   width: 125px;
   margin-top: -56px;
 }
@@ -422,13 +377,6 @@ main {
 .modal__rank__points {
   font-size: 15px;
   margin-top: 10px;
-=======
-  width: 90px;
-}
-
-.modal__rank__points {
-  font-size: 10px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .modal__champions {
@@ -437,15 +385,8 @@ main {
 }
 
 .modal__champions__title {
-<<<<<<< HEAD
   font-size: 22px;
   text-align: center;
-=======
-  font-size: 15px;
-  text-align: center;
-  margin-top: 15px;
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 .modal__champions__ul {
@@ -478,23 +419,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   gap: 5px;
   margin-right: 10px;
-=======
-  gap: 5px
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
 
 
 .modal__champions__img {
-<<<<<<< HEAD
   width: 70px;
   height: 70px;
-=======
-  width: 50px;
-  height: 50px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   border-radius: 10px;
 }
 
@@ -514,7 +446,6 @@ main {
 .modal__winrate {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
 }
 
 .modal__winrate__title {
@@ -522,15 +453,6 @@ main {
   text-align: center;
   margin-bottom: 5px;
   margin-top: 20px;
-=======
-
-}
-
-.modal__winrate__title {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 5px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 
 }
 
@@ -541,41 +463,23 @@ main {
   border-radius: 100%;
   align-items: center;
   text-align: center;
-<<<<<<< HEAD
   font-size: 34px;
   margin-top: 10px;
   padding-top: 27px;
 }
 
-=======
-  font-size: 30px;
-  padding-top: 30px;
-
-}
-
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 .div {
   display: flex;
   flex-direction: row;
 }
 
-<<<<<<< HEAD
 @media(max-width:1221px) {
-=======
-@media(max-width:912px) {
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   main {
     display: flex;
     flex-direction: column;
     background: url("../../assets/wallpaper.jpg");
   }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   .img__menu {
     display: flex;
     flex-direction: row;
@@ -583,7 +487,6 @@ main {
     width: 100%;
   }
 
-<<<<<<< HEAD
   .login {
     max-width: 100%;
   }
@@ -600,17 +503,6 @@ main {
   }
 
   .text__white {
-=======
-  .login__logo{
-    width: 100px;
-  }
-
-  .abrir{
-    display: flex;
-  }
-
-  .text__white{
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
     text-decoration-color: var(--white);
   }
 
@@ -621,31 +513,21 @@ main {
   }
 
   .login__search {
-<<<<<<< HEAD
     flex-direction: column;
     flex-direction: column;
     padding: 20px;
     background-color: white;
     opacity: 85%;
     border-radius: 10px;
-=======
-    display: none;
-    flex-direction: column;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   }
 
   .wallpaper {
     background: none;
     margin: 0;
-<<<<<<< HEAD
-=======
-    margin-top: -130px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
     margin-bottom: 2rem;
   }
 
   .select-dropdown:after {
-<<<<<<< HEAD
     position: absolute;
     top: 50%;
     right: 15%;
@@ -666,37 +548,11 @@ main {
     margin-top: 30px;
   }
 
-=======
-
-    position: absolute;
-    top: 50%;
-    right: 65%;
-
-  }
-
-  .login__button {
-    margin: 0 0 150px 115px;
-    position: relative;
-    bottom: 59px;
-  }
-
-  .modal__rank__img {
-    width: 50px;
-  }
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 
   .modal__rank__title {
     font-size: 10px;
     margin-bottom: 15px;
     width: 100px;
-<<<<<<< HEAD
-=======
-
-  }
-
-  .modal__rank {
-    width: 50px;
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   }
 
   .modal__winrate__p {
@@ -708,24 +564,13 @@ main {
 
   .modal__winrate__title {
     font-size: 12px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
   }
 
   .modal__champions__title {
     font-size: 14px;
-<<<<<<< HEAD
   }
   .modal__rank__img {
     visibility: hidden;
     margin-left: -200px ;
 }
-=======
-  
-  }
-
-
->>>>>>> 31e87ee41fe501955e67fcc3fa5072b744adae52
 }
