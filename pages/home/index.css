@@ -21,22 +21,7 @@ ul {
   --black: #000000;
   --blue: #1B77F3;
   --red: #CF3C3F;
-
-}
-
-.dark__mode:root {
-
-
-  --black: #FFF;
-  --blue: #F9F9F9;
-  --deep-grey: #ECECEC;
-  --whitesmoke: #C4C4C4;
-  --medium-grey: #A7A7A7;
-  --light-grey: #343434;
-  --white: #000000;
-  --grey: #1B77F3;
-  /* --white: #CF3C3F; */
-
+  
 }
 
 body {
@@ -49,8 +34,6 @@ body {
 main {
   display: flex;
   height: 100vh;
-  background-color: var(--white);
-
 }
 
 .login {
@@ -72,26 +55,18 @@ main {
 }
 
 .login__menu {
-  display: flex;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  margin-top: 40px;
+  display: none;
 }
 
 .login__logo {
-  width: 60%;
-  margin-bottom: 60px;
+  width: 40%;
   min-width: 20px;
 }
 
 .login__title {
-  color: var(--black);
-  font-size: 1.2rem;
+  color: var(--deep-grey);
+  font-size: 1.5rem;
   margin-bottom: 30px;
-
-  margin-right: 7rem;
-
 }
 
 .login__label {
@@ -99,10 +74,6 @@ main {
   margin-bottom: 20px;
   width: 100%;
 }
-
-.abrir{
-    display: flex;
-  }
 
 .login__search {
   display: flex;
@@ -115,9 +86,7 @@ main {
 }
 
 .img__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  text-align: center;
 }
 
 .input {
@@ -129,7 +98,7 @@ main {
   font-size: 0.9em;
   padding: 25px 10px 10px;
   font-weight: 600;
-  color: var(--white);
+  color: var(--deep-grey);
 }
 
 .login__label span {
@@ -137,14 +106,14 @@ main {
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--medium-grey);
   margin: 20px;
   cursor: text;
   transition: all 200ms ease;
 }
 
 .input:focus {
-  background-color: var(--white);
+  background-color: var(--whitesmoke);
   border: 2px solid var(--deep-grey);
 }
 
@@ -296,7 +265,6 @@ main {
   appearance: none;
   height: 57px;
   width: 94px;
-  color: var(--black);
   background-color: var(--light-grey);
   margin-left: 10px;
 }
@@ -362,18 +330,17 @@ main {
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 10px;
-  background-color: var(--white);
+  color: rgb(255, 255, 255);
+  background-color: rgb(32, 45, 55);
   font-family: Roboto, sans-serif;
   margin-top: -25px;
   text-align: center;
-  color: var(--black);
   width: 70px;
 }
 
 .modal__nick {
   font-size: 30px;
   text-align: center;
-  color: var(--black);
 }
 
 .modal__card {
@@ -391,7 +358,7 @@ main {
 }
 
 .modal__rank {
-  color: var(--black);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -403,7 +370,6 @@ main {
 .modal__rank__title {
   font-size: 22px;
   margin-bottom: 15px;
-  color: var(--black);
 }
 
 .modal__rank__img {
@@ -413,7 +379,6 @@ main {
 
 .modal__rank__points {
   font-size: 15px;
-  color: var(--black);
   margin-top: 10px;
 }
 
@@ -424,7 +389,6 @@ main {
 
 .modal__champions__title {
   font-size: 22px;
-  color: var(--black);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -436,6 +400,13 @@ main {
   margin-top: 15px;
 }
 
+.champions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
 
 .champions {
   display: flex;
@@ -463,17 +434,14 @@ main {
   border-radius: 10px;
 }
 
-.modal__champions__name {
-  color: var(--black);
-}
-
 .modal__champions__maestry {
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 10px;
-  color: var(--black);
-  background-color: var(--light-grey);
+  color: rgb(255, 255, 255);
+  background-color: rgb(32, 45, 55);
   font-family: Roboto, sans-serif;
+
   text-align: center;
   margin: -11px 2px 0 2px;
   width: 70px;
@@ -482,7 +450,6 @@ main {
 .modal__winrate {
   display: flex;
   flex-direction: column;
-  color: var(--black);
 }
 
 .modal__winrate__title {
@@ -490,7 +457,6 @@ main {
   text-align: center;
   margin-bottom: 5px;
   margin-top: 20px;
-  color: var(--black);
 
 }
 
@@ -503,13 +469,8 @@ main {
   text-align: center;
   font-size: 38px;
   margin-top: 10px;
-
-  padding-top: 27px;
-  color: var(--black);
-
   padding-top: 28px;
   
-
 }
 
 .div {
@@ -517,24 +478,11 @@ main {
   flex-direction: row;
 }
 
-
-
 @media(max-width:1221px) {
-
   main {
     display: flex;
     flex-direction: column;
-
-    background: url("../../assets/wallpaper.jpg");
-
   }
-
-  
-  
-  .text__white{
-    text-decoration-color: var(--white);
-  }
-
   .img__menu {
     display: none;
 
@@ -550,7 +498,6 @@ main {
     width: 100px;
   }
 
-
   .login__label span {
     font-size: 10px;
   }
@@ -564,22 +511,11 @@ main {
   .text__white {
     text-decoration-color: var(--white);
   }
-
-
   .login__menu {
     width: 22px;
     height: 18px;
     display: flex;
-    margin-top: -1px;
   }
-
-
-  .login__search {
-
-    display: flex;
-
-    flex-direction: column;
-    flex-direction: column;
 
   .login__button {
     margin-top: -8px;
@@ -588,7 +524,7 @@ main {
   .login__search {
     flex-direction: row;
     padding: 20px;
-    background-color: var(--white);
+    background-color: white;
     opacity: 85%;
     border-radius: 10px;
     margin-top: -25px;
@@ -598,18 +534,14 @@ main {
     margin-bottom: 10px;
     display: none;
   }
-
   .wallpaper {
     background: none;
     margin: 0;
-    margin-top: -220px;
-    margin-bottom: 2rem;
     height: 100vh;
     background-image: url(../../assets/wallpaper.jpg);
     background-size: cover;
     background-position: center;
     flex: 1;
-
   }
 
   .select-dropdown:after {
@@ -639,40 +571,27 @@ main {
     margin-bottom: 15px;
     width: 100px;
   }
-
   .modal__winrate__p {
     width: 70px;
     height: 70px;
     font-size: 20px;
     padding-top: 20px;
   }
-
   .modal__winrate__title {
     font-size: 12px;
   }
-
   .modal__champions__title {
     font-size: 20px;
     margin-bottom: 20px;
   }
 
-
-  .modal{
-    height: 83%;
-  }
-
-
   .modal__champions__ul {
     margin-bottom: 20px;
   }
-
   .modal__rank__img {
     visibility: hidden;
     margin-left: -200px;
   }
-
-}
-
   .modal__winrate {
     flex-direction: row;
     justify-content: center;
