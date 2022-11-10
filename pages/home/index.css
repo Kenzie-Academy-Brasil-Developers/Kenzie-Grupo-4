@@ -298,7 +298,7 @@ main {
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: 20%;
+  margin-top: 15%;
   opacity: 85%;
   min-width: 520px;
 }
@@ -374,7 +374,7 @@ main {
 
 .modal__rank__img {
   width: 125px;
-  margin-top: -56px;
+  margin-top: -65px;
 }
 
 .modal__rank__points {
@@ -466,9 +466,10 @@ main {
   border-radius: 100%;
   align-items: center;
   text-align: center;
-  font-size: 34px;
+  font-size: 38px;
   margin-top: 10px;
-  padding-top: 27px;
+  padding-top: 28px;
+  
 }
 
 .div {
@@ -532,6 +533,7 @@ main {
     background: none;
     margin: 0;
     height: 100vh;
+    background: border-box;
   }
 
   .select-dropdown:after {
