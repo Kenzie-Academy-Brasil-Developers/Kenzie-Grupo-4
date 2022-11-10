@@ -27,8 +27,6 @@ async function searchUser() {
         event.preventDefault()
         const regiao = localStorage.getItem("regiao")
         const usuario = pegarUsuario(regiao, usuarioPesquisado.value)
-        
-        //loadSummonerInfo(usuario)
 
     })
 
@@ -51,11 +49,6 @@ export async function loadSummonerInfo(account){
 
    
 }
-
-
-
-
-openSearch()
 
 
 export async function gerarBackground(){
