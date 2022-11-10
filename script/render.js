@@ -1,17 +1,16 @@
-import { loadSummonerInfo } from "../pages/home/index.js"
-import { iconeDoUsuario } from "./api.js"
+
+import { iconeDoUsuario, } from "./api.js"
 
 export async function renderModal(summoner, account, champions, mostPlayedChampions) {
     const userIcon = await iconeDoUsuario()
     const accountInfo = await account
-    
+
     const queueSolo = summoner.findIndex(element => element.queueType === 'RANKED_SOLO_5x5')
 
     const wins = summoner[queueSolo].wins
     const losses = summoner[queueSolo].losses
     const winRate = (wins / ((wins + losses)) * 100).toFixed(0)
     let championsMastery = mostPlayedChampions.map(champion => champion.championPoints)
-
 
     const modal = document.createElement("div")
 
@@ -43,12 +42,10 @@ export async function renderModal(summoner, account, champions, mostPlayedChampi
     modalText.classList.add("modal__text")
     modalRankLogo.classList.add("modal__rank__logo")
 
-
     mostPlayedChampions.forEach(playedChampions => {
         champions.forEach(champion => {
 
             if (champion.key == Number(playedChampions.championId)) {
-
 
                 const modalChampionsLi = document.createElement("li")
                 const modalChampionsImg = document.createElement("img")
@@ -70,8 +67,6 @@ export async function renderModal(summoner, account, champions, mostPlayedChampi
                 modalChampionsUl.appendChild(modalChampionsLi)
             }
         })
-
-
     });
 
 
@@ -83,7 +78,6 @@ export async function renderModal(summoner, account, champions, mostPlayedChampi
     modalChampions.classList.add("modal__champions")
     modalChampions.append(modalChampionsTitle, modalChampionsUl)
 
-
     modalWinrateTitle.innerText = "Winrate"
     modalWinrateTitle.classList.add("modal__winrate__title")
     modalWinrateP.innerText = `${winRate}%`
@@ -91,7 +85,6 @@ export async function renderModal(summoner, account, champions, mostPlayedChampi
     modalWinrate.classList.add("modal__winrate")
     modalWinrate.append(modalWinrateTitle, modalWinrateP)
 
-    //CORRIGIR DETALHES: imagem de elo, tratamento do texto para pt-br
     modalRankPoints.innerText = `${summoner[queueSolo].tier} ${summoner[queueSolo].rank} - ${summoner[queueSolo].leaguePoints} PDL`
     modalRankPoints.classList.add("modal__rank__points")
     modalRankImg.src = `../../assets/ranked-emblems/${summoner[queueSolo].tier}.png`
@@ -133,5 +126,4 @@ export async function renderModal(summoner, account, champions, mostPlayedChampi
     modal.classList.add("animate__fadeInUp")
 
     return modal
-
 }
