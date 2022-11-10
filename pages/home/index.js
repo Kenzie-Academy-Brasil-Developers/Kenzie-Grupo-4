@@ -43,7 +43,7 @@ async function loadSummonerInfo(){
 }
 
 
-openSearch()
+
 
 export async function gerarBackground(){
     const campeoes = await campeoesMaisJogados()
@@ -71,4 +71,33 @@ async function renderizarBackground(base){
     
 
 }
+
+
+function darkMode() {
+    const btnDarkMode = document.getElementById("darkMode")
+    const html = document.querySelector("html")
+
+    btnDarkMode.addEventListener("click", () => {
+        html.classList.toggle("dark__mode")
+        btnDarkMode.classList.toggle("text__white")
+
+        const darkPref = localStorage.getItem("darkmode")
+        if (!darkPref) {
+            localStorage.setItem("darkmode", true)
+        }
+
+        if (darkPref) {
+            localStorage.removeItem("darkmode")
+        }
+
+
+        if (btnDarkMode.classList.contains("text__white")) {
+            btnDarkMode.src = "../../assets/sun.png"
+        } else {
+           btnDarkMode.src = "../../assets/moon.png"
+        }
+    })
+}
+darkMode()
+
 
