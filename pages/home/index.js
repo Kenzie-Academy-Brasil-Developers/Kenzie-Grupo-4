@@ -43,6 +43,7 @@ async function loadSummonerInfo(){
 }
 
 
+<<<<<<< HEAD
 // function openSearch() {
 //     const btnSearch = document.getElementById("buttonSearch")
 //     const menuSearch = document.querySelector(".login__search")
@@ -74,6 +75,9 @@ async function loadSummonerInfo(){
 
 
 openSearch()
+=======
+
+>>>>>>> develop
 
 export async function gerarBackground(){
     const campeoes = await campeoesMaisJogados()
@@ -101,4 +105,37 @@ async function renderizarBackground(base){
     
 
 }
+<<<<<<< HEAD
 >>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+=======
+
+
+function darkMode() {
+    const btnDarkMode = document.getElementById("darkMode")
+    const html = document.querySelector("html")
+
+    btnDarkMode.addEventListener("click", () => {
+        html.classList.toggle("dark__mode")
+        btnDarkMode.classList.toggle("text__white")
+
+        const darkPref = localStorage.getItem("darkmode")
+        if (!darkPref) {
+            localStorage.setItem("darkmode", true)
+        }
+
+        if (darkPref) {
+            localStorage.removeItem("darkmode")
+        }
+
+
+        if (btnDarkMode.classList.contains("text__white")) {
+            btnDarkMode.src = "../../assets/sun.png"
+        } else {
+           btnDarkMode.src = "../../assets/moon.png"
+        }
+    })
+}
+darkMode()
+
+
+>>>>>>> develop

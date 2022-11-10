@@ -21,7 +21,22 @@ ul {
   --black: #000000;
   --blue: #1B77F3;
   --red: #CF3C3F;
-  
+
+}
+
+.dark__mode:root {
+
+
+  --black: #FFF;
+  --blue: #F9F9F9;
+  --deep-grey: #ECECEC;
+  --whitesmoke: #C4C4C4;
+  --medium-grey: #A7A7A7;
+  --light-grey: #343434;
+  --white: #000000;
+  --grey: #1B77F3;
+  /* --white: #CF3C3F; */
+
 }
 
 body {
@@ -36,7 +51,11 @@ main {
   
 =======
   height: 100vh;
+<<<<<<< HEAD
 >>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+=======
+  background-color: var(--white);
+>>>>>>> develop
 }
 
 .login {
@@ -58,19 +77,24 @@ main {
 }
 
 .login__menu {
-  display: none;
+  display: flex;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-top: 40px;
 }
 
 .login__logo {
-  width: 70%;
+  width: 60%;
   margin-bottom: 60px;
   min-width: 20px;
 }
 
 .login__title {
-  color: var(--deep-grey);
-  font-size: 1.5rem;
+  color: var(--black);
+  font-size: 1.2rem;
   margin-bottom: 30px;
+  margin-right: 7rem;
 
 }
 
@@ -94,7 +118,9 @@ main {
 }
 
 .img__menu {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .input {
@@ -106,7 +132,7 @@ main {
   font-size: 0.9em;
   padding: 25px 10px 10px;
   font-weight: 600;
-  color: var(--deep-grey);
+  color: var(--white);
 }
 
 .login__label span {
@@ -114,14 +140,14 @@ main {
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--medium-grey);
+  color: var(--black);
   margin: 20px;
   cursor: text;
   transition: all 200ms ease;
 }
 
 .input:focus {
-  background-color: var(--whitesmoke);
+  background-color: var(--white);
   border: 2px solid var(--deep-grey);
 }
 
@@ -273,6 +299,7 @@ main {
   appearance: none;
   height: 57px;
   width: 94px;
+  color: var(--black);
   background-color: var(--light-grey);
   margin-left: 10px;
 }
@@ -338,17 +365,18 @@ main {
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 10px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(32, 45, 55);
+  background-color: var(--white);
   font-family: Roboto, sans-serif;
   margin-top: -25px;
   text-align: center;
+  color: var(--black);
   width: 70px;
 }
 
 .modal__nick {
   font-size: 30px;
   text-align: center;
+  color: var(--black);
 }
 
 .modal__card {
@@ -364,7 +392,7 @@ main {
 }
 
 .modal__rank {
-
+  color: var(--black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,6 +404,7 @@ main {
 .modal__rank__title {
   font-size: 22px;
   margin-bottom: 15px;
+  color: var(--black);
 }
 
 .modal__rank__img {
@@ -385,6 +414,7 @@ main {
 
 .modal__rank__points {
   font-size: 15px;
+  color: var(--black);
   margin-top: 10px;
 }
 
@@ -395,6 +425,7 @@ main {
 
 .modal__champions__title {
   font-size: 22px;
+  color: var(--black);
   text-align: center;
 }
 
@@ -405,13 +436,6 @@ main {
   margin-top: 15px;
 }
 
-.champions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
 
 .champions {
   display: flex;
@@ -439,14 +463,17 @@ main {
   border-radius: 10px;
 }
 
+.modal__champions__name {
+  color: var(--black);
+}
+
 .modal__champions__maestry {
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 10px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(32, 45, 55);
+  color: var(--black);
+  background-color: var(--light-grey);
   font-family: Roboto, sans-serif;
-
   text-align: center;
   margin: -11px 2px 0 2px;
   width: 70px;
@@ -455,6 +482,7 @@ main {
 .modal__winrate {
   display: flex;
   flex-direction: column;
+  color: var(--black);
 }
 
 .modal__winrate__title {
@@ -462,6 +490,7 @@ main {
   text-align: center;
   margin-bottom: 5px;
   margin-top: 20px;
+  color: var(--black);
 
 }
 
@@ -475,6 +504,7 @@ main {
   font-size: 34px;
   margin-top: 10px;
   padding-top: 27px;
+  color: var(--black);
 }
 
 .div {
@@ -537,6 +567,7 @@ main {
     width: 22px;
     height: 18px;
     display: flex;
+    margin-top: -1px;
   }
 
   .login__search {
@@ -547,7 +578,7 @@ main {
     flex-direction: column;
     flex-direction: column;
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     opacity: 85%;
     border-radius: 10px;
   }
