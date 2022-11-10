@@ -1,6 +1,6 @@
 import {gerarBackground, loadSummonerInfo} from "../pages/home/index.js"
 
-const riotToken = "RGAPI-616c62a9-d294-49b8-ad2a-6967351eb389"
+const riotToken = "RGAPI-b4aad8cf-d086-4f8b-b3a3-64828c90e89a"
 const respchampion = await fetch("../../json/champion.json")
 const champions = await respchampion.json()
 
