@@ -53,8 +53,6 @@ export async function loadSummonerInfo(account){
 }
 
 
-openSearch()
-
 export async function gerarBackground(){
     const campeoes = await campeoesMaisJogados()
     const MaisJogado =  campeoes[0]
@@ -78,7 +76,5 @@ async function renderizarBackground(base){
     
     
     baseBackground.style.backgroundImage = `url("${url}")`
-    
-
 }
 
