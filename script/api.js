@@ -43,7 +43,7 @@ async function iconeDoUsuario(){
     const icon = localStorage.getItem("user:Icon")
 
     const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${icon}.png`)
-    const Iconusuario = await response
+    const Iconusuario = response
    
     
     return Iconusuario.url
