@@ -43,19 +43,14 @@ body {
   width: 100vw;
   height: 100vh;
   min-width: 320px;
+  overflow: hidden;
 }
 
 main {
   display: flex;
-<<<<<<< HEAD
-  
-=======
   height: 100vh;
-<<<<<<< HEAD
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
-=======
   background-color: var(--white);
->>>>>>> develop
+
 }
 
 .login {
@@ -94,6 +89,7 @@ main {
   color: var(--black);
   font-size: 1.2rem;
   margin-bottom: 30px;
+
   margin-right: 7rem;
 
 }
@@ -114,6 +110,7 @@ main {
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-top: 20px;
 
 }
 
@@ -332,7 +329,7 @@ main {
   background-color: var(--white);
   margin: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: 14rem;
+  margin-top: 15%;
   opacity: 85%;
   min-width: 520px;
 }
@@ -382,6 +379,7 @@ main {
 .modal__card {
   display: flex;
   flex-direction: row;
+  margin-top: -40px;
 }
 
 .modal__description {
@@ -389,6 +387,7 @@ main {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin: 50px 0;
 }
 
 .modal__rank {
@@ -409,7 +408,7 @@ main {
 
 .modal__rank__img {
   width: 125px;
-  margin-top: -56px;
+  margin-top: -65px;
 }
 
 .modal__rank__points {
@@ -427,6 +426,7 @@ main {
   font-size: 22px;
   color: var(--black);
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .modal__champions__ul {
@@ -501,10 +501,15 @@ main {
   border-radius: 100%;
   align-items: center;
   text-align: center;
-  font-size: 34px;
+  font-size: 38px;
   margin-top: 10px;
+
   padding-top: 27px;
   color: var(--black);
+
+  padding-top: 28px;
+  
+
 }
 
 .div {
@@ -512,19 +517,16 @@ main {
   flex-direction: row;
 }
 
-<<<<<<< HEAD
 
 
-@media(max-width:912px) {
-
-=======
 @media(max-width:1221px) {
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+
   main {
     display: flex;
     flex-direction: column;
+
     background: url("../../assets/wallpaper.jpg");
-   
+
   }
 
   
@@ -534,26 +536,27 @@ main {
   }
 
   .img__menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    display: none;
+
   }
 
   .login {
     max-width: 100%;
+    height: 10%;
+    min-height: 100px;
   }
 
   .login__logo {
     width: 100px;
   }
 
-<<<<<<< HEAD
-=======
+
   .login__label span {
     font-size: 10px;
   }
-
+  .login__label {
+    margin-bottom: 6px;
+  }
   .abrir {
     display: flex;
   }
@@ -562,7 +565,7 @@ main {
     text-decoration-color: var(--white);
   }
 
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+
   .login__menu {
     width: 22px;
     height: 18px;
@@ -570,27 +573,43 @@ main {
     margin-top: -1px;
   }
 
+
   .login__search {
-<<<<<<< HEAD
+
     display: flex;
-=======
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+
     flex-direction: column;
     flex-direction: column;
+
+  .login__button {
+    margin-top: -8px;
+    margin-left: 15px;
+  }
+  .login__search {
+    flex-direction: row;
     padding: 20px;
     background-color: var(--white);
     opacity: 85%;
     border-radius: 10px;
+    margin-top: -25px;
+  }
+
+  .login__title {
+    margin-bottom: 10px;
+    display: none;
   }
 
   .wallpaper {
     background: none;
     margin: 0;
-<<<<<<< HEAD
     margin-top: -220px;
-=======
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
     margin-bottom: 2rem;
+    height: 100vh;
+    background-image: url(../../assets/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+
   }
 
   .select-dropdown:after {
@@ -598,7 +617,6 @@ main {
     top: 50%;
     right: 15%;
   }
-
 
   .modal {
     display: flex;
@@ -611,7 +629,8 @@ main {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     opacity: 85%;
     min-width: 310px;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 500px;
   }
 
 
@@ -633,19 +652,37 @@ main {
   }
 
   .modal__champions__title {
-    font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
-<<<<<<< HEAD
+
   .modal{
     height: 83%;
   }
 
 
-=======
+  .modal__champions__ul {
+    margin-bottom: 20px;
+  }
+
   .modal__rank__img {
     visibility: hidden;
     margin-left: -200px;
   }
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
+
+}
+
+  .modal__winrate {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .modal__winrate__title {
+    font-size: 18px;
+    margin-right: 10px;
+    padding-top: 10px;
+  }
+
 }
