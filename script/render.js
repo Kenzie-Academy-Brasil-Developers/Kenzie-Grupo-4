@@ -4,6 +4,7 @@ import { iconeDoUsuario } from "./api.js"
 export async function renderModal(summoner, account, champions, mostPlayedChampions) {
     const userIcon = await iconeDoUsuario()
     const accountInfo = await account
+    
     const queueSolo = summoner.findIndex(element => element.queueType === 'RANKED_SOLO_5x5')
 
     const wins = summoner[queueSolo].wins
