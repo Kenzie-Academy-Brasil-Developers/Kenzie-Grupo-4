@@ -43,7 +43,7 @@ async function loadSummonerInfo(){
 }
 
 
-<<<<<<< HEAD
+
 // function openSearch() {
 //     const btnSearch = document.getElementById("buttonSearch")
 //     const menuSearch = document.querySelector(".login__search")
@@ -54,7 +54,7 @@ async function loadSummonerInfo(){
        
 //         btnSearch.classList.toggle("text__white")
 
-<<<<<<< HEAD
+
 //         if (btnSearch.classList.contains("text__white")) {
 //             btnSearch.src = "../../assets/Vector (9).png"
 //         } else {
@@ -63,21 +63,18 @@ async function loadSummonerInfo(){
 //     })
 // }
 // openSearch()
-=======
-        if (btnSearch.classList.contains("text__white")) {
-            btnSearch.src = "../../assets/Vector (8).png"
-        } else {
-            btnSearch.src = "../../assets/Vector (9).png"
-        }
-    })
-}
+
+//         if (btnSearch.classList.contains("text__white")) {
+//             btnSearch.src = "../../assets/Vector (8).png"
+//         } else {
+//             btnSearch.src = "../../assets/Vector (9).png"
+//         }
+//     })
+// }
 
 
 
 openSearch()
-=======
-
->>>>>>> develop
 
 export async function gerarBackground(){
     const campeoes = await campeoesMaisJogados()
@@ -105,9 +102,6 @@ async function renderizarBackground(base){
     
 
 }
-<<<<<<< HEAD
->>>>>>> d43698d73bdee9c1d31a347778678f48e16936b9
-=======
 
 
 function darkMode() {
@@ -138,4 +132,4 @@ function darkMode() {
 darkMode()
 
 
->>>>>>> develop
+
