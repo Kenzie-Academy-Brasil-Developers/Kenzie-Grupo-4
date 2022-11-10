@@ -42,7 +42,7 @@ async function campeoesMaisJogados(){
 async function iconeDoUsuario(){
     const icon = localStorage.getItem("user:Icon")
 
-    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${icon}.png`)
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/12.21.1/img/profileicon/${icon}.png`)
     const Iconusuario = await response
    
     
@@ -60,3 +60,4 @@ async function backgroundImagem(nome){
 }
 
 export { champions, pegarUsuario, dadosDoUsuario, campeoesMaisJogados, iconeDoUsuario, backgroundImagem}
+
