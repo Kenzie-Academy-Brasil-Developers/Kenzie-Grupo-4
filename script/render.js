@@ -1,4 +1,3 @@
-
 import { iconeDoUsuario, } from "./api.js"
 
 export async function renderModal(summoner, account, champions, mostPlayedChampions) {

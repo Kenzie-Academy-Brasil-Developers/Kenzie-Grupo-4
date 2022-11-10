@@ -1,8 +1,9 @@
-import { gerarBackground, loadSummonerInfo } from "../pages/home/index.js"
+import {gerarBackground, loadSummonerInfo} from "../pages/home/index.js"
 
 const riotToken = "RGAPI-91dddd49-6bea-4346-8348-3575d6d125b5"
 const respchampion = await fetch("../../json/champion.json")
 const champions = await respchampion.json()
+
 
 async function pegarUsuario(regiao,usuario){
     const response = await fetch(`https://${regiao}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${usuario}?api_key=${riotToken}`)
@@ -52,10 +53,10 @@ async function backgroundImagem(nome){
 
     const tratado = nome.replace(/ /g,'');
 
-    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${tratado}_0.jpg`)
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${tratado}_0.jpg`)
     const imagem =  response
     
     return imagem.url
 }
 
-export { champions, pegarUsuario, dadosDoUsuario, campeoesMaisJogados, iconeDoUsuario, backgroundImagem }
+export { champions, pegarUsuario, dadosDoUsuario, campeoesMaisJogados, iconeDoUsuario, backgroundImagem}
